@@ -54,11 +54,6 @@ def create_lyrics_dotplot(lyrics, by_character=False, remove_punctuation=True, c
     # Plot the matrix
     ax.matshow(matrix, cmap=cmap, aspect='auto')
     
-    # Set labels for axes
-    analysis_type = "Character" if by_character else "Word"
-    ax.set_xlabel("Sequence Position", fontsize=12)
-    ax.set_ylabel("Sequence Position", fontsize=12)
-    
     # Hide the tick labels if there are too many (especially for character-level analysis)
     if n > 50:
         ax.set_xticks([])
